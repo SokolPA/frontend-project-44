@@ -6,4 +6,15 @@ const getRandomOper = () => {
   return arrOperators[randomNumber];
 };
 
-export { getRandomInt, getRandomOper };
+const getGcdTwoNumbers = (numberOne, numberTwo) => {
+  let x = Math.abs(numberOne);
+  let y = Math.abs(numberTwo);
+  while (y) {
+    const buff = y;
+    y = x % y;
+    x = buff;
+  }
+  return x;
+};
+
+export { getRandomInt, getRandomOper, getGcdTwoNumbers };
